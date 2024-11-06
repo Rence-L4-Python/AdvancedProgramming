@@ -1,0 +1,11 @@
+import tkinter as tk
+window = tk.Tk()
+label = tk.Label(text="Label")
+label.pack()
+b1 = tk.Button(window, text="Click me!",)
+b1.pack()
+b2 = tk.Button(window, text="Click me!")
+b2.pack()
+b3 = tk.Button(window, text="Click me!")
+b3.pack()
+window.mainloop()
