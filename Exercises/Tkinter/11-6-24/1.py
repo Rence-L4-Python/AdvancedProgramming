@@ -1,5 +1,5 @@
-# Import Module
 from tkinter import *
+from tkinter import ttk
 
 # Initializing the GUI window
 main = Tk()
@@ -26,32 +26,32 @@ right_frame.place(x=400, y=30, height=1000, width=600)
 
 
 # Placing components in the left frame
-Label(left_frame, text="Name", font=labelfont, bg=lf_bg).place(x=30, y=50)
-Label(left_frame, text="Contact Number", font=labelfont, bg=lf_bg).place(x=30,y=100)
-Label(left_frame, text="Email Address", font=labelfont, bg=lf_bg).place(x=30,y=150)
-Label(left_frame, text="Gender", font=labelfont, bg=lf_bg).place(x=30, y=200)
-Label(left_frame, text="Date of Birth (DOB)", font=labelfont, bg=lf_bg).place(x=30, y=250)
-Label(left_frame, text="Stream", font=labelfont, bg=lf_bg).place(x=30, y=300)
-Entry(left_frame, width=20, textvariable=name_strvar, font=entryfont).place(x=170, y=50)
-Entry(left_frame, width=19, textvariable=contact_strvar, font=entryfont).place(x=170, y=100)
-Entry(left_frame, width=19, textvariable=email_strvar, font=entryfont).place(x=170,y=150)
-Entry(left_frame, width=19, textvariable=stream_strvar, font=entryfont).place(x=170, y=300)
+Label(left_frame, text="Name", font='labelfont', bg=lf_bg).place(x=30, y=50)
+Label(left_frame, text="Contact Number", font='labelfont', bg=lf_bg).place(x=30,y=100)
+Label(left_frame, text="Email Address", font='labelfont', bg=lf_bg).place(x=30,y=150)
+Label(left_frame, text="Gender", font='labelfont', bg=lf_bg).place(x=30, y=200)
+Label(left_frame, text="Date of Birth (DOB)", font='labelfont', bg=lf_bg).place(x=30, y=250)
+Label(left_frame, text="Stream", font='labelfont', bg=lf_bg).place(x=30, y=300)
+Entry(left_frame, width=20, textvariable=name_strvar, font='entryfont').place(x=170, y=50)
+Entry(left_frame, width=19, textvariable=contact_strvar, font='entryfont').place(x=170, y=100)
+Entry(left_frame, width=19, textvariable=email_strvar, font='entryfont').place(x=170,y=150)
+Entry(left_frame, width=19, textvariable=stream_strvar, font='entryfont').place(x=170, y=300)
 OptionMenu(left_frame, gender_strvar, 'Male', "Female").place(x=170, y=200, width=70)
-dob = DateEntry(left_frame, font=("Arial", 12), width=15)
+dob = Entry(left_frame, font=("Arial", 12), width=15)
 dob.place(x=180, y=250)
-Button(left_frame, text='Submit and Add Record', font=labelfont, command=add_record, width=18).place(x=80, y=380)
+Button(left_frame, text='Submit and Add Record', font='labelfont', command='add_record', width=18).place(x=80, y=380)
 
 #Place the buttons in the left frame
 
-Button(left_frame, text='Delete Record', font=labelfont, command=remove_record, width=15).place(x=30, y=450)
-Button(left_frame, text='View Record', font=labelfont, command=view_record, width=15).place(x=200, y=450)
-Button(left_frame, text='Clear Fields', font=labelfont, command=reset_fields, width=15).place(x=30, y=520)
-Button(left_frame, text='Remove database', font=labelfont, command=reset_form, width=15).place(x=200, y=520)
+Button(left_frame, text='Delete Record', font='labelfont', command='remove_record', width=15).place(x=30, y=450)
+Button(left_frame, text='View Record', font='labelfont', command='view_record', width=15).place(x=200, y=450)
+Button(left_frame, text='Clear Fields', font='labelfont', command='reset_fields', width=15).place(x=30, y=520)
+Button(left_frame, text='Remove database', font='labelfont', command='reset_form', width=15).place(x=200, y=520)
 # Placing components in the right frame
 
 Label(right_frame, text='Students Records', font='Arial', bg='DarkBlue', fg='LightCyan').pack(side=TOP, fill=X)
 tree = ttk.Treeview(right_frame, height=100, selectmode=BROWSE,
-                   columns=('Stud ID', "Name", "Email Addr", "Contact No", "Gender", "Date of Birth", "Stream"))
+                   columns=("Stud ID", "Name", "Email Addr", "Contact No", "Gender", "Date of Birth", "Stream"))
 X_scroller = Scrollbar(tree, orient=HORIZONTAL, command=tree.xview)
 Y_scroller = Scrollbar(tree, orient=VERTICAL, command=tree.yview)
 X_scroller.pack(side=BOTTOM, fill=X)
@@ -74,7 +74,8 @@ tree.column('#5', width=60, stretch=NO)
 tree.column('#6', width=70, stretch=NO)
 tree.column('#7', width=120, stretch=NO)
 tree.place(y=30, relwidth=1, relheight=0.9, relx=0)
-display_records()
+def display_records():
+    pass
 
 
 main.update()
