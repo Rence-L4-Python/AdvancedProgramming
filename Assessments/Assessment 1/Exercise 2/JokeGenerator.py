@@ -6,7 +6,7 @@ from tkinter import *
 jokes = [] # List to hold text lines from regex
 
 def loadJokes(): # Function for opening text files, using regular expressions for data extraction
-    with open("Exercise 2/randomJokes.txt","r") as file:
+    with open("Exercise 2/randomJokes.txt","r") as file: # Opens and reads the text file in the relative folder (Exercise 2)
         for regex in file:
             x = re.split(r'(?<=\?)', regex.strip()) # Splits the strings in the text file into lists using the question mark as reference. 
             jokes.append(x) # Adds the extracted data to the global list "jokes"
@@ -31,8 +31,8 @@ def displayGUI(): # Function for displaying things in the Tkinter GUI
 
     if len(selected_joke) > 1: # Can just combine this with the first if-statement; this only serves to organize the code
         Tklabel2.config(text="") # Clears the second label's text every time the button is pressed
-        secondLabel = selected_joke[1] # Second label uses the punchline in the jokes list
-        root.after(1500, update_Tklabel2, secondLabel)
+        secondLabel = selected_joke[1] # Second label uses the "punchline" in the jokes list
+        root.after(1500, update_Tklabel2, secondLabel) # Updates Tklabel2 "punchline" after a 1.5 second delay
 
     if len(jokes) == 0: # Clears the second label if there are no more jokes left
         Tklabel2.config(text="")
