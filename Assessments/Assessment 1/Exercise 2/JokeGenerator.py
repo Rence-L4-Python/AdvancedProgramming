@@ -51,8 +51,7 @@ loadJokes() # Initialize regex function
 root = Tk()
 root.title("Joke Generator")
 root.geometry("350x250")
-root.minsize(350, 250)
-root.maxsize(350, 250)
+root.resizable(False,False)
 root.configure(background="lightgray")
 image1 = PhotoImage(file="sprite1.png") # Custom image I made in Aseprite, robot neutral face
 image2 = PhotoImage(file="sprite2.png") # Custom image I made in Aseprite, robot smiling face
