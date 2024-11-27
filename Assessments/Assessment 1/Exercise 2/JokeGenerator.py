@@ -6,7 +6,7 @@ from tkinter import *
 jokes = [] # List to hold text lines from regex
 
 def loadJokes(): # Function for opening text files, using regular expressions for data extraction
-    with open("Exercise 2/randomJokes.txt","r") as file: # Opens and reads the text file in the relative folder (Exercise 2)
+    with open("randomJokes.txt","r") as file: # Opens and reads the text file
         for regex in file:
             x = re.split(r'(?<=\?)', regex.strip()) # Splits the strings in the text file into lists using the question mark as reference. 
             jokes.append(x) # Adds the extracted data to the global list "jokes"
@@ -54,8 +54,8 @@ root.geometry("350x250")
 root.minsize(350, 250)
 root.maxsize(350, 250)
 root.configure(background="lightgray")
-image1 = PhotoImage(file="Exercise 2/sprite1.png") # Custom image I made in Aseprite, robot neutral face
-image2 = PhotoImage(file="Exercise 2/sprite2.png") # Custom image I made in Aseprite, robot smiling face
+image1 = PhotoImage(file="sprite1.png") # Custom image I made in Aseprite, robot neutral face
+image2 = PhotoImage(file="sprite2.png") # Custom image I made in Aseprite, robot smiling face
 Tkimage = Label(root, image=image1)
 Tkimage.pack(side=TOP, expand=TRUE, pady=10)
 Tklabel1 = Label(root, text="", borderwidth=2, relief=GROOVE, font=("Roboto"))
