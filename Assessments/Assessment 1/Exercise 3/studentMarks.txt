@@ -1,0 +1,15 @@
+8439, Jake Hobbs, 10,11,10,43 
+8898, Nicholas West, 12,5,9,55 
+3234, Victor Reynolds, 5,5,2,16
+8196, Samuel Ward, 7,6,4,42
+5030, Casper Hanes, 18,17,17,92
+7322, Regis Knight, 15,17,16,81
+7505, Stellan Gray, 12,12,12,60
+4543, Edric Hanes, 20,20,19,78
+4800, Aimee de la Cruz, 9,10,13,64
+8458, Engel Jung, 19,17,15,83
+727, Helgi Heimisson, 11,12,13,69
+1755, Hyeon Han, 20,18,15,81
+7100, Leo Reynolds, 17,16,16,72
+1869, Liyah Tan, 16,15,12,75
+9001, Yongliang Gong, 20,20,20,100
