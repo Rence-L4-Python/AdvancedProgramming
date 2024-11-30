@@ -264,14 +264,14 @@ deleteRecord_button.pack(side='left', padx=(10, 20))
 columns = ('student_id','name','mark1','mark2','mark3','exam_mark','overall','grade') # Defines a tuple containing items that will be used as the headers in the treeview widget
 treeview = ttk.Treeview(root, columns=columns, show='headings') # Shows a treeview using the previously mentioned columns and only showing them as headings
 
-treeview.heading('student_id', text="Student ID", command=lambda: sortByOrder(treeview, 'student_id', False)) # Defines the column headings for the treeview. The sorting function is attached to all of them to sort the rows under their columns in a descending or ascending order.
-treeview.heading('name', text="Name", command=lambda: sortByOrder(treeview, 'name', False))
-treeview.heading('mark1', text="Coursework 1", command=lambda: sortByOrder(treeview, 'mark1', False))
-treeview.heading('mark2', text="Coursework 2", command=lambda: sortByOrder(treeview, 'mark2', False))
-treeview.heading('mark3', text="Coursework 3", command=lambda: sortByOrder(treeview, 'mark3', False))
-treeview.heading('exam_mark', text="Exam Score", command=lambda: sortByOrder(treeview, 'exam_mark', False))
-treeview.heading('overall', text="Overall Percentage", command=lambda: sortByOrder(treeview, 'overall', False))
-treeview.heading('grade', text="Grade", command=lambda: sortByOrder(treeview, 'grade', False))
+treeview.heading('student_id', text="Student ID", anchor="w", command=lambda: sortByOrder(treeview, 'student_id', False)) # Defines the column headings for the treeview. The sorting function is attached to all of them to sort the rows under their columns in a descending or ascending order.
+treeview.heading('name', text="Name", anchor="w", command=lambda: sortByOrder(treeview, 'name', False))
+treeview.heading('mark1', text="Coursework 1", anchor="w", command=lambda: sortByOrder(treeview, 'mark1', False))
+treeview.heading('mark2', text="Coursework 2", anchor="w", command=lambda: sortByOrder(treeview, 'mark2', False))
+treeview.heading('mark3', text="Coursework 3", anchor="w", command=lambda: sortByOrder(treeview, 'mark3', False))
+treeview.heading('exam_mark', text="Exam Score", anchor="w", command=lambda: sortByOrder(treeview, 'exam_mark', False))
+treeview.heading('overall', text="Overall Percentage", anchor="w", command=lambda: sortByOrder(treeview, 'overall', False))
+treeview.heading('grade', text="Grade", anchor="w", command=lambda: sortByOrder(treeview, 'grade', False))
 treeview.pack(fill='both', expand='true')
 
 regExLogic() # Initializes the regExLogic() function
