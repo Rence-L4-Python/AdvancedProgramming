@@ -33,15 +33,15 @@ def displayMenu(): # FUNCTION REQUIREMENT FOR ASSESSMENT
     selected_difficulty = StringVar(value="Difficulty: Easy") # Sets the difficulty to easy by default
 
     clear_widgets() # Clears previous widgets to load new ones
-    newGame() # Resets global variables for replay
+    newGame() # Resets global variables for replayability
 
-    Label(root, text="Welcome to the Math Quiz Generator!", font=("Arial", 26, "bold"), fg="#8B0000", bg="#F0F0F0").place(relx=0.5, rely=0.25, anchor=CENTER) # Header text
+    Label(root, text="Welcome to the Math Quiz Generator!", font=("Arial", 26, "bold"), fg="#8B0000", bg="#F0F0F0").place(relx=0.5, rely=0.225, anchor=CENTER) # Header text
     
     Button(root, text="Start Quiz", font=("Arial", 16, "bold"), bg="#E9E9E9", command=displayProblem, padx=15, pady=15).place(relx=0.5, rely=0.5, anchor=CENTER) # Start Quiz button
 
     option_menu = OptionMenu(root, selected_difficulty, *difficulties) # Dropdown list for difficulties
     option_menu.config(font=("Arial", 14), bg="#E9E9E9", padx=5, pady=5)
-    option_menu.place(relx=0.5, rely=0.75, anchor=CENTER)
+    option_menu.place(relx=0.5, rely=0.65, anchor=CENTER)
     
 def newGame(): # Resets all global variables to allow for replayability
      global points, quiz_count, attempts # Makes sure this affects the variables outside this function
